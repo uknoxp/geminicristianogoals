@@ -1,5 +1,5 @@
 // URL para o nosso ficheiro de dados JSON
-const DATA_URL = 'data.json';
+const DATA_URL = '/data.json';
 
 // Função principal para carregar e processar os dados
 async function loadData() {
@@ -115,4 +115,5 @@ loadData();
 // A regra de que "adicionar um golo nas equipas, adiciona no contador principal" 
 // terá de ser tratada no seu Editor (Google Sheets), garantindo que:
 // Total de Golos = SOMA (Golos de todos os Clubes)
+
 // O Sheets fará esse cálculo automaticamente antes de exportar o JSON.
