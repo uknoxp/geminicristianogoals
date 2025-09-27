@@ -6,6 +6,7 @@ body {
     padding: 0;
     
     /* 1. Fundo Fixo - Lê o URL da variável CSS (--bg-image) definida pelo JavaScript */ 
+    background-image: var(--bg-image); /* <-- ADICIONE ESTA LINHA */
     background-size: cover;
     background-attachment: fixed; /* O segredo para o fundo não se mover! */
     background-position: center center;
@@ -112,3 +113,4 @@ h2 {
     }
 
 }
+
