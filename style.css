@@ -116,6 +116,30 @@ h2 {
     }
 
 }
+/* ================================================= */
+/* === CORREÇÃO DE FUNDO FIXO E SCROLL PARA IOS === */
+/* ================================================= */
+
+/* 1. Definimos as propriedades do background no elemento body */
+body {
+    /* Garante que a imagem está a usar a variável definida no JS */
+    background-image: var(--bg-image); 
+    background-size: cover;
+    background-position: center center;
+    
+    /* Esta linha é a causa do problema no iOS, mas é necessária noutros browsers */
+    background-attachment: fixed; 
+}
+
+/* 2. Media Query (Truque) para corrigir o bug de altura e scroll no iOS Safari */
+/* O '@supports' deteta navegadores baseados em WebKit (iOS Safari) */
+@supports (-webkit-overflow-scrolling: touch) {
+    body {
+        /* Desativa o 'fixed' e usa o 'scroll' para evitar o 'esticar' e o movimento */
+        background-attachment: scroll !important; 
+    }
+}
+
 
 
 
