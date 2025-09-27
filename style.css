@@ -13,10 +13,13 @@ body {
     background-color: #000; /* Cor de fallback */
 }
 
-/* Fundo semi-transparente para garantir que o texto é legível sobre a imagem */
+/*
+ * O filtro (fundo semi-transparente) foi removido daqui para mostrar a imagem natural.
+ * Se precisar de padding no topo, use padding-top.
+ */
 main, header {
-    background-color: rgba(0, 0, 0, 0.7); /* <-- ESTA LINHA CRIA O FILTRO */
-    padding: 20px 5%;
+    padding: 20px 5%; /* Manter o espaço nas laterais */
+    background-color: transparent !important; /* FORÇA a transparência */
 }
 
 .main-counter-section {
@@ -69,9 +72,9 @@ h2 {
 
 .club-item, .trophy-item {
     padding: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.2); /* <-- APAGUE ESTAS 3 LINHAS */
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.05);
+    border: none !important; /* FORÇA a remoção da borda */
+    border-radius: 0 !important; /* FORÇA a remoção do arredondamento */
+    background-color: transparent !important; /* FORÇA a transparência do fundo */
 }
 
 .club-logo, .trophy-icon {
@@ -113,6 +116,7 @@ h2 {
     }
 
 }
+
 
 
 
