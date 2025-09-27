@@ -73,7 +73,7 @@ function renderClubs(clubs) {
             <img src="${club.logo}" alt="${club.name} Logo" class="club-logo">
             <h3>${club.name}</h3>
             <p class="club-goals">${club.goals.toLocaleString('pt-PT')}</p>
-            <p class="club-games">${club.games.toLocaleString('pt-PT')} jogos</p>
+            <p class="club-games">${club.games.toLocaleString('pt-PT')} games</p>
         `;
         
         container.appendChild(clubItem);
@@ -117,3 +117,4 @@ loadData();
 // Total de Golos = SOMA (Golos de todos os Clubes)
 
 // O Sheets fará esse cálculo automaticamente antes de exportar o JSON.
+
