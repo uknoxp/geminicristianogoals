@@ -48,23 +48,21 @@
     { "name": "UEFA Super Cup", "count": 2, "icon": "/assets/trophies/uefa_super_cup.png" },
     { "name": "UEFA European Championship", "count": 1, "icon": "/assets/trophies/euro.png" },
     { "name": "UEFA Nations League", "count": 2, "icon": "/assets/trophies/nations_league.png" },
-
     { "name": "Premier League (ENG)", "count": 3, "icon": "/assets/trophies/premier_league.png" },
     { "name": "FA Cup (ENG)", "count": 1, "icon": "/assets/trophies/fa_cup.png" },
     { "name": "EFL Cup (ENG)", "count": 2, "icon": "/assets/trophies/efl_cup.png" },
     { "name": "Community Shield (ENG)", "count": 1, "icon": "/assets/trophies/community_shield.png" },
-
     { "name": "La Liga (ES)", "count": 2, "icon": "/assets/trophies/la_liga.png" },
     { "name": "Copa del Rey (ES)", "count": 2, "icon": "/assets/trophies/copa_del_rey.png" },
     { "name": "Supercopa de España (ES)", "count": 2, "icon": "/assets/trophies/supercopa_es.png" },
-
     { "name": "Serie A (IT)", "count": 2, "icon": "/assets/trophies/serie_a.png" },
     { "name": "Coppa Italia (IT)", "count": 1, "icon": "/assets/trophies/coppa_italia.png" },
     { "name": "Supercoppa Italiana (IT)", "count": 2, "icon": "/assets/trophies/supercoppa_it.png" },
-
     { "name": "Supertaça de Portugal (PT)", "count": 1, "icon": "/assets/trophies/supertaça_pt.png" },
     { "name": "Arab Club Champions Cup (SA)", "count": 1, "icon": "/assets/trophies/arab_club_cc.png" },
     
+    /* Troféus Individuais */
+    { "name": "UEFA Champions League Top Scorer", "count": 6, "icon": "/assets/trophies/ucl_top_scorer.png" },
     { "name": "Ballon d'Or", "count": 5, "icon": "/assets/trophies/ballon_dor.png" },
     { "name": "The Best FIFA Men's Player", "count": 2, "icon": "/assets/trophies/the_best.png" },
     { "name": "FIFA World Player of the Year", "count": 1, "icon": "/assets/trophies/fifa_world_player.png" },
@@ -77,11 +75,3 @@
     { "name": "IFFHS World's Best Goal Scorer", "count": 5, "icon": "/assets/trophies/iffhs_scorer.png" }
   ]
 }
-
-
-
-
-
-
-
-
