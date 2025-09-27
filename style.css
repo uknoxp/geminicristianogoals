@@ -1,0 +1,114 @@
+/* Importar uma fonte de impacto */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    
+    /* 1. Fundo Fixo - Lê o URL da variável CSS (--bg-image) definida pelo JavaScript */
+    background-image: var(--bg-image, url('placeholder_cr7.jpg')); 
+    background-size: cover;
+    background-attachment: fixed; /* O segredo para o fundo não se mover! */
+    background-position: center center;
+    background-color: #000; /* Cor de fallback */
+}
+
+/* Fundo semi-transparente para garantir que o texto é legível sobre a imagem */
+main, header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 5%;
+}
+
+.main-counter-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 2. Contador de Golos Grande e com cor variável */
+.total-goals {
+    font-size: 10rem; 
+    font-weight: 900;
+    letter-spacing: -5px;
+    line-height: 1;
+    /* Lê a cor da variável CSS (--counter-color) definida pelo JavaScript */
+    color: var(--counter-color, #FFD700); 
+    display: block;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+}
+
+/* ESTILO GERAL DE SECÇÕES */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--counter-color, #FFD700);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Estrutura de Grelha para Clubes e Troféus */
+.data-grid {
+    display: grid;
+    gap: 20px;
+    margin: 0 auto 50px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.clubs-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    text-align: center;
+}
+
+.club-item, .trophy-item {
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.club-logo, .trophy-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* 4 & 5. Estatísticas de Golos e Jogos */
+.club-goals {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--counter-color, #FFD700);
+    margin: 5px 0;
+}
+
+.club-games {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* 6. Troféus */
+.trophies-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    text-align: center;
+}
+
+.trophy-count {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--counter-color, #FFD700);
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .total-goals {
+        font-size: 5rem;
+    }
+}

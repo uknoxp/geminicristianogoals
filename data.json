@@ -1,0 +1,80 @@
+"config": {
+    "background": "https://images.unsplash.com/photo-1549479366-224422e5a408?ixlib=rb-4.0.3&w=1920&q=80",
+    "counterColor": "#FFD700",
+    "totalGoals": 895
+  },
+  "clubs": [
+    {
+      "name": "Sporting CP",
+      "goals": 5,
+      "games": 31,
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3e/Sporting_Clube_de_Portugal_logo.svg/1024px-Sporting_Clube_de_Portugal_logo.svg.png"
+    },
+    {
+      "name": "Manchester United",
+      "goals": 145,
+      "games": 346,
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1024px-Manchester_United_FC_crest.svg.png"
+    },
+    {
+      "name": "Real Madrid",
+      "goals": 450,
+      "games": 438,
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/1024px-Real_Madrid_CF.svg.png"
+    },
+    {
+      "name": "Juventus",
+      "goals": 101,
+      "games": 134,
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/b/bc/Juventus_FC_2017_logo.svg/1024px-Juventus_FC_2017_logo.svg.png"
+    },
+    {
+      "name": "Al-Nassr",
+      "goals": 56,
+      "games": 61,
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fa/Al-Nassr_FC_logo.svg/1024px-Al-Nassr_FC_logo.svg.png"
+    },
+    {
+      "name": "Portugal",
+      "goals": 138,
+      "games": 210,
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Portugal_national_football_team_logo.svg/1024px-Portugal_national_football_team_logo.svg.png"
+    }
+  ],
+  "trophies": [
+    {
+      "name": "Champions League",
+      "count": 5,
+      "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg"
+    },
+    {
+      "name": "Bola de Ouro",
+      "count": 5,
+      "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/medal-solid.svg"
+    },
+    {
+      "name": "Euro",
+      "count": 1,
+      "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/flag-solid.svg"
+    },
+    {
+      "name": "Liga Espanhola",
+      "count": 2,
+      "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg"
+    },
+    {
+      "name": "Liga Inglesa",
+      "count": 3,
+      "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg"
+    },
+    {
+      "name": "Supertaças de Espanha",
+      "count": 2,
+      "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg"
+    },
+    {
+      "name": "Taças Nacionais",
+      "count": 6,
+      "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg"
+    }
+  ]
