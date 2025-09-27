@@ -60,8 +60,6 @@
     { "name": "Supercoppa Italiana (IT)", "count": 2, "icon": "/assets/trophies/supercoppa_it.png" },
     { "name": "Supertaça de Portugal (PT)", "count": 1, "icon": "/assets/trophies/supertaça_pt.png" },
     { "name": "Arab Club Champions Cup (SA)", "count": 1, "icon": "/assets/trophies/arab_club_cc.png" },
-    
-    /* Troféus Individuais */
     { "name": "UEFA Champions League Top Scorer", "count": 6, "icon": "/assets/trophies/ucl_top_scorer.png" },
     { "name": "Ballon d'Or", "count": 5, "icon": "/assets/trophies/ballon_dor.png" },
     { "name": "The Best FIFA Men's Player", "count": 2, "icon": "/assets/trophies/the_best.png" },
