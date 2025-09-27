@@ -9,37 +9,37 @@
       "name": "Sporting CP",
       "goals": 5,
       "games": 31,
-      "logo": "https://upload.wikimedia.org/wikipedia/pt/2/28/Sporting_Clube_Portugal_Logotipo.png"
+      "logo": "/assets/logos/sporting.png"
     },
     {
       "name": "Manchester United",
       "goals": 145,
       "games": 346,
-      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/1024px-Manchester_United_FC_crest.svg.png"
+      "logo": "/assets/logos/manutd.png"
     },
     {
       "name": "Real Madrid",
       "goals": 450,
       "games": 438,
-      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/1024px-Real_Madrid_CF.svg.png"
+      "logo": "/assets/logos/realmadrid.png"
     },
     {
       "name": "Juventus",
       "goals": 101,
       "games": 134,
-      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/1/18/Juventus_FC_logo_2017.svg/400px-Juventus_FC_logo_2017.svg.png"
+      "logo": "/assets/logos/juventus.png"
     },
     {
       "name": "Al-Nassr",
       "goals": 104,
       "games": 117,
-      "logo": "https://upload.wikimedia.org/wikipedia/en/f/fa/Al-Nassr_FC_logo.svg"
+      "logo": "/assets/logos/alnassr.png"
     },
     {
       "name": "Portugal",
       "goals": 141,
       "games": 223,
-      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Portugal_national_football_team_logo.svg/400px-Portugal_national_football_team_logo.svg.png"
+      "logo": "/assets/logos/portugal.png"
     }
   ],
   "trophies": [
@@ -80,5 +80,6 @@
     }
   ]
 }
+
 
 
