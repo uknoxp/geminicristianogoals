@@ -63,17 +63,19 @@
     { "name": "Supercoppa Italiana (IT)", "count": 2, "icon": "/assets/trophies/supercoppa_it.png" },
 
     { "name": "Supertaça de Portugal (PT)", "count": 1, "icon": "/assets/trophies/supertaça_pt.png" },
-    { "name": "Arab Club Champions Cup (SA)", "count": 1, "icon": "/assets/trophies/arab_club_cc.png" }
-    { "name": "Ballon d'Or", "count": [5], "icon": "/assets/trophies/ballon_dor.png" },
-    { "name": "The Best FIFA Men's Player", "count": [2], "icon": "/assets/trophies/the_best.png" },
-    { "name": "FIFA World Player of the Year", "count": [1], "icon": "/assets/trophies/fifa_world_player.png" },
-    { "name": "European Golden Shoe", "count": [4], "icon": "/assets/trophies/golden_shoe.png" },
-    { "name": "UEFA Player of the Year", "count": [4], "icon": "/assets/trophies/uefa_player.png" },
-    { "name": "FIFA Puskás Award", "count": [1], "icon": "/assets/trophies/puskas_award.png" },
-    { "name": "Pichichi Trophy", "count": [3], "icon": "/assets/trophies/pichichi_trophy.png" },
-    { "name": "Premier League Golden Boot", "count": [1], "icon": "/assets/trophies/premier_league_gb.png" },
-    { "name": "Serie A Footballer of the Year", "count": [1], "icon": "/assets/trophies/serie_a_player.png" },
-    { "name": "IFFHS World's Best Goal Scorer", "count": [5], "icon": "/assets/trophies/iffhs_scorer.png" }
+    { "name": "Arab Club Champions Cup (SA)", "count": 1, "icon": "/assets/trophies/arab_club_cc.png" },
+    
+    /* Troféus Individuais Corrigidos */
+    { "name": "Ballon d'Or", "count": 5, "icon": "/assets/trophies/ballon_dor.png" },
+    { "name": "The Best FIFA Men's Player", "count": 2, "icon": "/assets/trophies/the_best.png" },
+    { "name": "FIFA World Player of the Year", "count": 1, "icon": "/assets/trophies/fifa_world_player.png" },
+    { "name": "European Golden Shoe", "count": 4, "icon": "/assets/trophies/golden_shoe.png" },
+    { "name": "UEFA Player of the Year", "count": 4, "icon": "/assets/trophies/uefa_player.png" },
+    { "name": "FIFA Puskás Award", "count": 1, "icon": "/assets/trophies/puskas_award.png" },
+    { "name": "Pichichi Trophy", "count": 3, "icon": "/assets/trophies/pichichi_trophy.png" },
+    { "name": "Premier League Golden Boot", "count": 1, "icon": "/assets/trophies/premier_league_gb.png" },
+    { "name": "Serie A Footballer of the Year", "count": 1, "icon": "/assets/trophies/serie_a_player.png" },
+    { "name": "IFFHS World's Best Goal Scorer", "count": 5, "icon": "/assets/trophies/iffhs_scorer.png" }
   ]
 }
 
