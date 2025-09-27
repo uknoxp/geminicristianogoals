@@ -43,43 +43,30 @@
     }
   ],
   "trophies": [
-    {
-      "name": "Champions League",
-      "count": 5,
-      "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg"
-    },
-    {
-      "name": "Ballon d'Or",
-      "count": 5,
-      "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/medal-solid.svg"
-    },
-    {
-      "name": "European Cup",
-      "count": 1,
-      "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/flag-solid.svg"
-    },
-    {
-      "name": "La Liga",
-      "count": 2,
-      "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg"
-    },
-    {
-      "name": "English Premier League",
-      "count": 3,
-      "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg"
-    },
-    {
-      "name": "Supercopa de España",
-      "count": 2,
-      "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg"
-    },
-    {
-      "name": "Taças Nacionais",
-      "count": 6,
-      "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg"
-    }
+    { "name": "UEFA Champions League", "count": 5, "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg" },
+    { "name": "FIFA Club World Cup", "count": 4, "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg" },
+    { "name": "UEFA Super Cup", "count": 2, "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg" },
+    { "name": "UEFA European Championship", "count": 1, "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/flag-solid.svg" },
+    { "name": "UEFA Nations League", "count": 2, "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/flag-solid.svg" },
+
+    { "name": "Premier League (ENG)", "count": 3, "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg" },
+    { "name": "FA Cup (ENG)", "count": 1, "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg" },
+    { "name": "EFL Cup (ENG)", "count": 2, "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg" },
+    { "name": "Community Shield (ENG)", "count": 1, "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg" },
+
+    { "name": "La Liga (ES)", "count": 2, "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg" },
+    { "name": "Copa del Rey (ES)", "count": 2, "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg" },
+    { "name": "Supercopa de España (ES)", "count": 2, "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg" },
+
+    { "name": "Serie A (IT)", "count": 2, "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg" },
+    { "name": "Coppa Italia (IT)", "count": 1, "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg" },
+    { "name": "Supercoppa Italiana (IT)", "count": 2, "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg" },
+
+    { "name": "Supertaça de Portugal (PT)", "count": 1, "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg" },
+    { "name": "Arab Club Champions Cup (SA)", "count": 1, "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg" }
   ]
 }
+
 
 
 
