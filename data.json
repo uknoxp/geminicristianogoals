@@ -1,5 +1,5 @@
 {
-"config": {
+  "config": {
     "background": "https://images.unsplash.com/photo-1549479366-224422e5a408?ixlib=rb-4.0.3&w=1920&q=80",
     "counterColor": "#FFD700",
     "totalGoals": 895
@@ -79,6 +79,4 @@
       "icon": "https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/svg/trophy-solid.svg"
     }
   ]
-    
-
-
+}
