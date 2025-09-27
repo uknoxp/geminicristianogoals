@@ -5,8 +5,7 @@ body {
     margin: 0;
     padding: 0;
     
-    /* 1. Fundo Fixo - Lê o URL da variável CSS (--bg-image) definida pelo JavaScript */
-    background-image: var(--bg-image, url('placeholder_cr7.jpg')); 
+    /* 1. Fundo Fixo - Lê o URL da variável CSS (--bg-image) definida pelo JavaScript */ 
     background-size: cover;
     background-attachment: fixed; /* O segredo para o fundo não se mover! */
     background-position: center center;
@@ -111,4 +110,5 @@ h2 {
     .total-goals {
         font-size: 5rem;
     }
+
 }
