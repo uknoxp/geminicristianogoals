@@ -15,7 +15,7 @@ body {
 
 /* Fundo semi-transparente para garantir que o texto é legível sobre a imagem */
 main, header {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* <-- ESTA LINHA CRIA O FILTRO */
     padding: 20px 5%;
 }
 
@@ -113,4 +113,5 @@ h2 {
     }
 
 }
+
 
