@@ -65,7 +65,6 @@
     { "name": "Supertaça de Portugal (PT)", "count": 1, "icon": "/assets/trophies/supertaça_pt.png" },
     { "name": "Arab Club Champions Cup (SA)", "count": 1, "icon": "/assets/trophies/arab_club_cc.png" },
     
-    /* Troféus Individuais Corrigidos */
     { "name": "Ballon d'Or", "count": 5, "icon": "/assets/trophies/ballon_dor.png" },
     { "name": "The Best FIFA Men's Player", "count": 2, "icon": "/assets/trophies/the_best.png" },
     { "name": "FIFA World Player of the Year", "count": 1, "icon": "/assets/trophies/fifa_world_player.png" },
@@ -78,6 +77,7 @@
     { "name": "IFFHS World's Best Goal Scorer", "count": 5, "icon": "/assets/trophies/iffhs_scorer.png" }
   ]
 }
+
 
 
 
