@@ -27,19 +27,19 @@
       "name": "Juventus",
       "goals": 101,
       "games": 134,
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Juventus_FC_logo_2017.svg/800px-Juventus_FC_logo_2017.svg.png"
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/1/18/Juventus_FC_logo_2017.svg/400px-Juventus_FC_logo_2017.svg.png"
     },
     {
       "name": "Al-Nassr",
       "goals": 56,
       "games": 61,
-      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fa/Al-Nassr_FC_logo.svg/800px-Al-Nassr_FC_logo.svg.png"
+      "logo": "https://upload.wikimedia.org/wikipedia/en/f/fa/Al-Nassr_FC_logo.svg"
     },
     {
       "name": "Portugal",
       "goals": 138,
       "games": 210,
-      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Portugal_national_football_team_logo.svg/800px-Portugal_national_football_team_logo.svg.png"
+      "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Portugal_national_football_team_logo.svg/400px-Portugal_national_football_team_logo.svg.png"
     }
   ],
   "trophies": [
@@ -80,4 +80,5 @@
     }
   ]
 }
+
 
