@@ -1,0 +1,26 @@
+{
+    "name": "CristianoGoals.com",
+    "short_name": "CR7 Goals",
+    "description": "Follow Cristiano to Infinity.",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#121212",
+    "theme_color": "#FFD700",
+    "icons": [
+        {
+            "src": "/favicon.png",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/img/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/img/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
