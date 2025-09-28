@@ -1,8 +1,7 @@
 {
   "config": {
     "background": "/assets/img/background.jpg",
-    "counterColor": "#FFD700",
-    "totalGoals": 895
+    "counterColor": "#FFD700"
   },
   "clubs": [
     {
@@ -43,6 +42,7 @@
     }
   ],
   "trophies": [
+    /* Troféus de Equipa */
     { "name": "UEFA Champions League", "count": 5, "icon": "/assets/trophies/champions_league.png" },
     { "name": "FIFA Club World Cup", "count": 4, "icon": "/assets/trophies/club_world_cup.png" },
     { "name": "UEFA Super Cup", "count": 2, "icon": "/assets/trophies/uefa_super_cup.png" },
@@ -60,6 +60,8 @@
     { "name": "Supercoppa Italiana (IT)", "count": 2, "icon": "/assets/trophies/supercoppa_it.png" },
     { "name": "Supertaça de Portugal (PT)", "count": 1, "icon": "/assets/trophies/supertaça_pt.png" },
     { "name": "Arab Club Champions Cup (SA)", "count": 1, "icon": "/assets/trophies/arab_club_cc.png" },
+    
+    /* Troféus Individuais */
     { "name": "UEFA Champions League Top Scorer", "count": 6, "icon": "/assets/trophies/ucl_top_scorer.png" },
     { "name": "Ballon d'Or", "count": 5, "icon": "/assets/trophies/ballon_dor.png" },
     { "name": "The Best FIFA Men's Player", "count": 2, "icon": "/assets/trophies/the_best.png" },
