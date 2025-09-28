@@ -4,45 +4,14 @@
     "counterColor": "#FFD700"
   },
   "clubs": [
-    {
-      "name": "Sporting CP",
-      "goals": 5,
-      "games": 31,
-      "logo": "/assets/logos/sporting.png"
-    },
-    {
-      "name": "Manchester United",
-      "goals": 145,
-      "games": 346,
-      "logo": "/assets/logos/manutd.png"
-    },
-    {
-      "name": "Real Madrid",
-      "goals": 450,
-      "games": 438,
-      "logo": "/assets/logos/realmadrid.png"
-    },
-    {
-      "name": "Juventus",
-      "goals": 101,
-      "games": 134,
-      "logo": "/assets/logos/juventus.png"
-    },
-    {
-      "name": "Al-Nassr",
-      "goals": 104,
-      "games": 117,
-      "logo": "/assets/logos/alnassr.png"
-    },
-    {
-      "name": "Portugal",
-      "goals": 141,
-      "games": 223,
-      "logo": "/assets/logos/portugal.png"
-    }
+    { "name": "Sporting CP", "goals": 5, "games": 31, "logo": "/assets/logos/sporting.png" },
+    { "name": "Manchester United", "goals": 145, "games": 346, "logo": "/assets/logos/manutd.png" },
+    { "name": "Real Madrid", "goals": 450, "games": 438, "logo": "/assets/logos/realmadrid.png" },
+    { "name": "Juventus", "goals": 101, "games": 134, "logo": "/assets/logos/juventus.png" },
+    { "name": "Al-Nassr", "goals": 104, "games": 117, "logo": "/assets/logos/alnassr.png" },
+    { "name": "Portugal", "goals": 141, "games": 223, "logo": "/assets/logos/portugal.png" }
   ],
   "trophies": [
-    /* Troféus de Equipa */
     { "name": "UEFA Champions League", "count": 5, "icon": "/assets/trophies/champions_league.png" },
     { "name": "FIFA Club World Cup", "count": 4, "icon": "/assets/trophies/club_world_cup.png" },
     { "name": "UEFA Super Cup", "count": 2, "icon": "/assets/trophies/uefa_super_cup.png" },
@@ -60,8 +29,6 @@
     { "name": "Supercoppa Italiana (IT)", "count": 2, "icon": "/assets/trophies/supercoppa_it.png" },
     { "name": "Supertaça de Portugal (PT)", "count": 1, "icon": "/assets/trophies/supertaça_pt.png" },
     { "name": "Arab Club Champions Cup (SA)", "count": 1, "icon": "/assets/trophies/arab_club_cc.png" },
-    
-    /* Troféus Individuais */
     { "name": "UEFA Champions League Top Scorer", "count": 6, "icon": "/assets/trophies/ucl_top_scorer.png" },
     { "name": "Ballon d'Or", "count": 5, "icon": "/assets/trophies/ballon_dor.png" },
     { "name": "The Best FIFA Men's Player", "count": 2, "icon": "/assets/trophies/the_best.png" },
