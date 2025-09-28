@@ -19,8 +19,11 @@ body {
     font-family: var(--font-primary);
     color: var(--color-text);
     min-height: 100vh;
-    /* CORREÇÃO PARA BLOQUEAR SCROLL HORIZONTAL */
+    /* CORREÇÃO CRÍTICA: Bloquear o scroll e rolamento lateral */
     overflow-x: hidden;
+    overflow-y: scroll;
+    /* Linha que pode resolver o problema de fundo fixo em apps móveis */
+    -webkit-overflow-scrolling: touch; 
     
     background-image: url("/assets/img/background.jpg"); 
     background-size: cover;
@@ -39,8 +42,8 @@ body {
 
 header {
     width: 100%;
-    /* CORREÇÃO CRÍTICA: Removido min-height: 100vh para parar o scroll indesejado */
-    min-height: auto; 
+    /* REVERSÃO: Voltar a definir a altura do header para manter o layout */
+    min-height: 100vh; 
     display: flex;
     align-items: center;
     justify-content: center;
