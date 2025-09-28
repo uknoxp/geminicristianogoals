@@ -26,7 +26,7 @@ body {
     color: var(--color-text);
     min-height: 100vh;
     
-    /* Configuração do fundo (Será corrigido no final para iOS) */
+    /* Configuração do fundo */
     background-image: var(--bg-image);
     background-size: cover;
     background-position: center center;
@@ -35,7 +35,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 50px; /* Espaço para o rodapé ou fim de página */
+    padding-bottom: 50px; /* Espaço para o fim de página */
 }
 
 /* ------------------------------------------------- */
@@ -50,7 +50,6 @@ header {
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    /* Efeito de sombreamento para separar o contador do fundo */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); 
 }
 
@@ -60,7 +59,7 @@ header {
     border-radius: 15px;
     backdrop-filter: blur(5px);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    margin-top: -15vh; /* Levanta o contador um pouco acima do centro */
+    margin-top: -15vh; 
 }
 
 .total-goals {
@@ -175,7 +174,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     transition: box-shadow 0.2s;
-    min-height: 180px; /* Garante que os cartões têm uma altura uniforme */
+    min-height: 180px;
 }
 
 .trophy-item:hover {
@@ -201,7 +200,7 @@ h2 {
     font-weight: 700;
     color: var(--color-secondary);
     line-height: 1.2;
-    min-height: 3em; /* Garante que o texto se alinha bem */
+    min-height: 3em; 
 }
 
 /* ------------------------------------------------- */
@@ -242,10 +241,8 @@ h2 {
 /* ================================================= */
 
 /* 2. Truque para corrigir o bug de altura e scroll no iOS Safari */
-/* O '@supports' deteta navegadores baseados em WebKit (iOS Safari) */
 @supports (-webkit-overflow-scrolling: touch) {
     body {
-        /* Desativa o 'fixed' e usa o 'scroll' para evitar o 'esticar' e o movimento */
         background-attachment: scroll !important; 
     }
 }
