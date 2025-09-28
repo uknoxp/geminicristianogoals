@@ -5,8 +5,8 @@
 :root {
     --counter-color: #FFD700; 
     --font-primary: 'Montserrat', sans-serif;
-    --color-text: #FFFFFF;     /* BRANCO: Texto geral (nomes de clubes) */
-    --color-secondary: #FFFFFF; /* BRANCO: Texto secundário (games, troféus) */
+    --color-text: #FFFFFF;    /* CORRIGIDO PARA BRANCO */
+    --color-secondary: #FFFFFF; /* CORRIGIDO PARA BRANCO */
 }
 
 * {
@@ -75,8 +75,9 @@ header {
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
 }
 
+/* Se precisar de garantir que o texto 'Goals' também é branco */
 .counter-label {
-    color: #FFFFFF; /* Garante que a palavra 'Goals' é branca */
+    color: #FFFFFF;
 }
 
 /* ------------------------------------------------- */
