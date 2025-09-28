@@ -1,12 +1,12 @@
 /* ================================================= */
-/* === CONFIGURAÇÕES GLOBAIS E RESET               === */
+/* === CONFIGURAÇÕES GLOBAIS E RESET               === */
 /* ================================================= */
 
 :root {
     --counter-color: #FFD700; 
     --font-primary: 'Montserrat', sans-serif;
-    --color-text: #E0E0E0;
-    --color-secondary: #AAAAAA;
+    --color-text: #FFFFFF;    /* Corrigido para BRANCO (#FFFFFF) */
+    --color-secondary: #FFFFFF; /* Corrigido para BRANCO (#FFFFFF) */
 }
 
 * {
@@ -43,7 +43,7 @@ body::before {
 }
 
 /* ------------------------------------------------- */
-/* === CONTADOR PRINCIPAL (HEADER)                 === */
+/* === CONTADOR PRINCIPAL (HEADER)                 === */
 /* ------------------------------------------------- */
 
 header {
@@ -75,8 +75,13 @@ header {
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
 }
 
+/* Para garantir que a palavra 'Goals' é branca, se necessário */
+.counter-label {
+    color: #FFFFFF;
+}
+
 /* ------------------------------------------------- */
-/* === CONTEÚDO PRINCIPAL (MAIN)                   === */
+/* === CONTEÚDO PRINCIPAL (MAIN)                   === */
 /* ------------------------------------------------- */
 
 main {
@@ -99,7 +104,7 @@ h2 {
 }
 
 /* ------------------------------------------------- */
-/* === GRID DE DADOS (Clubes e Troféus)            === */
+/* === GRID DE DADOS (Clubes e Troféus)            === */
 /* ------------------------------------------------- */
 
 .data-grid {
@@ -205,7 +210,7 @@ h2 {
 }
 
 /* ------------------------------------------------- */
-/* === MEDIA QUERIES (Responsividade)              === */
+/* === MEDIA QUERIES (Responsividade)              === */
 /* ------------------------------------------------- */
 
 @media (max-width: 768px) {
