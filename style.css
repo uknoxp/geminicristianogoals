@@ -3,12 +3,12 @@
 /* ================================================= */
 
 :root {
-    --bg-image: url("/assets/img/background.jpg"); 
+    /* REMOVIDO: A variável --bg-image para evitar conflito. */
     --counter-color: #FFD700; 
     --font-primary: 'Montserrat', sans-serif;
     --color-text: #E0E0E0;
     --color-secondary: #AAAAAA;
-    --color-dark-bg: rgba(18, 18, 18, 0.85); /* Fundo escuro semitransparente */
+    --color-dark-bg: rgba(18, 18, 18, 0.85);
     --color-dark-bg-card: rgba(30, 30, 30, 0.9);
 }
 
@@ -22,10 +22,13 @@ body {
     font-family: var(--font-primary);
     color: var(--color-text);
     min-height: 100vh;
-    background-image: var(--bg-image);
+    
+    /* CORREÇÃO FINAL: Fundo definido aqui, diretamente. */
+    background-image: url("/assets/img/background.jpg"); 
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,6 +56,10 @@ header {
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     margin-top: -15vh; 
+
+    /* CORREÇÃO DO FILTRO PRINCIPAL: O BLUR FINALMENTE APLICADO */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 .total-goals {
@@ -68,15 +75,33 @@ header {
 /* === GRID DE DADOS (Clubes)                      === */
 /* ------------------------------------------------- */
 
+main {
+    width: 90%;
+    max-width: 1200px;
+    padding-top: 50px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--counter-color);
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
+}
+
 .data-grid {
     display: grid;
     gap: 20px;
     padding: 20px;
-    /* O Fundo escuro semitransparente que já estava bom: */
     background: var(--color-dark-bg);
     border-radius: 10px;
 
-    /* TRUQUE FINAL: Tenta o BLUR, se não suportar, ignora. */
+    /* FILTRO DE BLUR PARA AS GRIDS */
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
 }
@@ -90,7 +115,7 @@ header {
     border-radius: 8px;
     padding: 15px;
     display: flex;
-    flex-direction: column; /* CORRIGE O LAYOUT DOS CLUBES (Fica vertical) */
+    flex-direction: column; 
     text-align: center;
     align-items: center; 
     transition: transform 0.2s;
@@ -127,25 +152,6 @@ header {
 }
 
 /* ------------------- RESTO DO CSS (TROFÉUS, ETC.) ------------------- */
-
-main {
-    width: 90%;
-    max-width: 1200px;
-    padding-top: 50px;
-}
-
-section {
-    margin-bottom: 50px;
-}
-
-h2 {
-    font-size: 2.5em;
-    font-weight: 900;
-    text-align: center;
-    margin-bottom: 30px;
-    color: var(--counter-color);
-    text-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
-}
 
 .trophies-grid {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -205,4 +211,3 @@ h2 {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 }
-
