@@ -43,7 +43,7 @@ header {
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    box-shadow: none; /* CORREÇÃO: REMOVIDA A SOMBRA QUE CAUSAVA A LINHA ESCURA */
+    box-shadow: none; /* Linha preta removida */
     background-color: transparent; 
 }
 
@@ -101,8 +101,12 @@ h2 {
 
 /* CLUBS GRID */
 .clubs-grid {
-    /* LAYOUT RESPONSIVO: Ajusta o número de colunas à largura do ecrã */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Força 6 colunas, e agora centra-as. */
+    grid-template-columns: repeat(6, 1fr);
+    
+    /* CORREÇÃO: CENTRAR OS ITENS NA HORIZONTAL E VERTICAL */
+    justify-content: center;
+    align-items: center;
 }
 
 .club-item {
