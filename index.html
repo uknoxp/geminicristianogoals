@@ -6,9 +6,11 @@
     <title>CristianoGoals.com - Contador de Golos do CR7</title>
     <link rel="icon" type="image/png" href="/favicon.png"> 
     <link rel="shortcut icon" href="/favicon.png" type="image/png">
-    
+
+    <!-- Manifesto para PWA -->
+    <link rel="manifest" href="/manifest.json">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EP0D3BNSG"></script>
@@ -16,15 +18,12 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-7EP0D3BNSG');
     </script>
-    
 </head>
 <body id="main-body">
 
     <header class="main-counter-section">
-        
         <div class="counter-container">
             <span id="total-goals-display" class="total-goals">000</span>
             <p class="counter-label">Goals</p>
@@ -32,21 +31,54 @@
     </header>
 
     <main class="content">
-
         <section class="clubs-section">
             <h2 id="clubs-title">Clubs</h2> 
-            <div id="clubs-container" class="data-grid clubs-grid">
-            </div>
+            <div id="clubs-container" class="data-grid clubs-grid"></div>
         </section>
 
         <section class="trophies-section">
             <h2 id="trophies-title">Trophies</h2>
-            <div id="trophies-container" class="data-grid trophies-grid">
-            </div>
+            <div id="trophies-container" class="data-grid trophies-grid"></div>
         </section>
-
     </main>
 
+    <!-- Popup para instalar -->
+    <div id="install-popup" style="display:none; position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:#000; color:#FFD700; padding:15px; border-radius:10px; text-align:center; z-index:999;">
+        <p>⚽ Adiciona CristianoGoals ao teu ecrã principal!</p>
+        <button id="install-btn" style="margin-top:10px; padding:8px 12px; background:#FFD700; color:#000; border:none; border-radius:5px; font-weight:bold;">Adicionar</button>
+    </div>
+
     <script src="script.js"></script>
+
+    <!-- Script para Service Worker e popup -->
+    <script>
+    // Registo do service worker
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/service-worker.js")
+        .then(() => console.log("Service Worker registado"))
+        .catch(err => console.error("Erro no SW:", err));
+    }
+
+    // Lógica do popup "Add to Home Screen"
+    let deferredPrompt;
+    const popup = document.getElementById('install-popup');
+    const installBtn = document.getElementById('install-btn');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      popup.style.display = 'block';
+    });
+
+    installBtn.addEventListener('click', async () => {
+      popup.style.display = 'none';
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        console.log("Resultado:", outcome);
+        deferredPrompt = null;
+      }
+    });
+    </script>
 </body>
 </html>
