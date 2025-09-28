@@ -3,14 +3,15 @@
 /* ================================================= */
 
 :root {
-    /* O JS ainda irá definir estas variáveis, mas o fundo não as usará mais */
-    --counter-color: #FFD700; 
+    /* Estas variáveis serão definidas pelo JavaScript em tempo real */
+    --bg-image: url("/assets/img/background.jpg"); 
+    --counter-color: #FFD700; /* Dourado */
 
     /* Variáveis de estilo */
     --font-primary: 'Montserrat', sans-serif;
     --color-text: #E0E0E0;
     --color-secondary: #AAAAAA;
-    --color-dark-bg: rgba(18, 18, 18, 0.85);
+    --color-dark-bg: rgba(18, 18, 18, 0.85); /* Fundo escuro semitransparente */
     --color-dark-bg-card: rgba(30, 30, 30, 0.9);
 }
 
@@ -25,10 +26,8 @@ body {
     color: var(--color-text);
     min-height: 100vh;
     
-    /* === CORREÇÃO DE FUNDO: Caminho Direto === */
-    /* Removemos a variável CSS (--bg-image) e usamos o caminho direto para a imagem.
-       Isto elimina o risco de o JavaScript falhar ao definir a variável. */
-    background-image: url("/assets/img/background.jpg");
+    /* Configuração do fundo (Será corrigido no final para iOS) */
+    background-image: var(--bg-image);
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -36,7 +35,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 50px;
+    padding-bottom: 50px; /* Espaço para o rodapé ou fim de página */
 }
 
 /* ------------------------------------------------- */
@@ -45,12 +44,13 @@ body {
 
 header {
     width: 100%;
-    min-height: 100vh; 
+    min-height: 100vh; /* Ocupa a altura total da tela */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     flex-direction: column;
+    /* Efeito de sombreamento para separar o contador do fundo */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); 
 }
 
@@ -60,7 +60,7 @@ header {
     border-radius: 15px;
     backdrop-filter: blur(5px);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    margin-top: -15vh; 
+    margin-top: -15vh; /* Levanta o contador um pouco acima do centro */
 }
 
 .total-goals {
@@ -175,7 +175,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     transition: box-shadow 0.2s;
-    min-height: 180px;
+    min-height: 180px; /* Garante que os cartões têm uma altura uniforme */
 }
 
 .trophy-item:hover {
@@ -201,7 +201,7 @@ h2 {
     font-weight: 700;
     color: var(--color-secondary);
     line-height: 1.2;
-    min-height: 3em; 
+    min-height: 3em; /* Garante que o texto se alinha bem */
 }
 
 /* ------------------------------------------------- */
@@ -241,8 +241,11 @@ h2 {
 /* === CORREÇÃO DE FUNDO FIXO E SCROLL PARA IOS === */
 /* ================================================= */
 
+/* 2. Truque para corrigir o bug de altura e scroll no iOS Safari */
+/* O '@supports' deteta navegadores baseados em WebKit (iOS Safari) */
 @supports (-webkit-overflow-scrolling: touch) {
     body {
+        /* Desativa o 'fixed' e usa o 'scroll' para evitar o 'esticar' e o movimento */
         background-attachment: scroll !important; 
     }
 }
