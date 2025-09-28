@@ -3,7 +3,7 @@
 /* ================================================= */
 
 :root {
-    /* Estas variáveis serão definidas pelo JavaScript em tempo real */
+    /* Estas variáveis serão definidas pelo JavaScript */
     --bg-image: url("/assets/img/background.jpg"); 
     --counter-color: #FFD700; /* Dourado */
 
@@ -26,7 +26,7 @@ body {
     color: var(--color-text);
     min-height: 100vh;
     
-    /* Configuração do fundo (Será corrigido no final para iOS) */
+    /* Dependência da variável do JavaScript */
     background-image: var(--bg-image);
     background-size: cover;
     background-position: center center;
@@ -35,7 +35,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 50px; /* Espaço para o rodapé ou fim de página */
+    padding-bottom: 50px; 
 }
 
 /* ------------------------------------------------- */
@@ -44,13 +44,12 @@ body {
 
 header {
     width: 100%;
-    min-height: 100vh; /* Ocupa a altura total da tela */
+    min-height: 100vh; 
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    /* Efeito de sombreamento para separar o contador do fundo */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); 
 }
 
@@ -58,9 +57,10 @@ header {
     background: var(--color-dark-bg);
     padding: 30px 50px;
     border-radius: 15px;
+    /* ESTA LINHA CRIA O BLUR E A TRANSPARÊNCIA NAS CAIXAS */
     backdrop-filter: blur(5px);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    margin-top: -15vh; /* Levanta o contador um pouco acima do centro */
+    margin-top: -15vh; 
 }
 
 .total-goals {
@@ -126,7 +126,10 @@ h2 {
     border-radius: 8px;
     padding: 15px;
     display: flex;
-    align-items: center;
+    /* MUDANÇA ESSENCIAL: Alinhamento vertical do conteúdo do clube */
+    flex-direction: column;
+    text-align: center;
+    align-items: center; 
     transition: transform 0.2s;
 }
 
@@ -139,10 +142,12 @@ h2 {
     width: 60px;
     height: 60px;
     object-fit: contain;
-    margin-right: 15px;
+    /* Ajuste de margem para o layout vertical */
+    margin: 0 0 10px 0;
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
 }
 
+/* O Nome, Golos e Jogos agora aparecerão em coluna */
 .club-name {
     font-weight: 900;
     font-size: 1.1em;
@@ -175,7 +180,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     transition: box-shadow 0.2s;
-    min-height: 180px; /* Garante que os cartões têm uma altura uniforme */
+    min-height: 180px;
 }
 
 .trophy-item:hover {
@@ -201,7 +206,7 @@ h2 {
     font-weight: 700;
     color: var(--color-secondary);
     line-height: 1.2;
-    min-height: 3em; /* Garante que o texto se alinha bem */
+    min-height: 3em; 
 }
 
 /* ------------------------------------------------- */
@@ -215,6 +220,7 @@ h2 {
     .counter-label {
         font-size: 1.2em;
     }
+    /* CORREÇÃO DO LAYOUT MOBILE (Garantido em dispositivos pequenos) */
     .club-item {
         flex-direction: column;
         text-align: center;
@@ -234,18 +240,5 @@ h2 {
     }
     .trophy-name {
         font-size: 0.7em;
-    }
-}
-
-/* ================================================= */
-/* === CORREÇÃO DE FUNDO FIXO E SCROLL PARA IOS === */
-/* ================================================= */
-
-/* 2. Truque para corrigir o bug de altura e scroll no iOS Safari */
-/* O '@supports' deteta navegadores baseados em WebKit (iOS Safari) */
-@supports (-webkit-overflow-scrolling: touch) {
-    body {
-        /* Desativa o 'fixed' e usa o 'scroll' para evitar o 'esticar' e o movimento */
-        background-attachment: scroll !important; 
     }
 }
