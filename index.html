@@ -11,8 +11,6 @@
     
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <link rel="manifest" href="/geminicristianogoals/manifest.json">
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7EP0D3BNSG"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -51,19 +49,5 @@
 
     <script src="script.js"></script>
 
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                // Usamos o caminho absoluto para garantir que funciona no GitHub Pages.
-                navigator.serviceWorker.register('/geminicristianogoals/service-worker.js').then(function(registration) {
-                    console.log('ServiceWorker registado com sucesso');
-                }, function(err) {
-                    console.log('Falha no registro do ServiceWorker: ', err);
-                });
-            });
-        }
-    </script>
-</body>
+    </body>
 </html>
-
-
