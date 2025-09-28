@@ -19,7 +19,7 @@ body {
     font-family: var(--font-primary);
     color: var(--color-text);
     min-height: 100vh;
-    /* CORREÇÃO: Impede o scroll horizontal que esconde os ícones */
+    /* CORRIGE O SCROLL LATERAL INDESEJADO */
     overflow-x: hidden; 
     
     background-image: url("/assets/img/background.jpg"); 
@@ -101,9 +101,9 @@ h2 {
     border-radius: 0;
 }
 
-/* CLUBS GRID - CORREÇÃO CRÍTICA APLICADA */
+/* CLUBS GRID - CORRIGIDO PARA NÃO QUEBRAR */
 .clubs-grid {
-    /* CORREÇÃO: Usar auto-fit para que a grelha não quebre em ecrãs pequenos */
+    /* O ajuste automático é o mais seguro para todos os ecrãs */
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     justify-content: center;
     align-items: center;
@@ -153,7 +153,6 @@ h2 {
 
 /* TROPHIES GRID */
 .trophies-grid {
-    /* Mantido o ajuste automático para troféus */
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     text-align: center;
 }
@@ -206,7 +205,7 @@ h2 {
         font-size: 6em;
     }
     
-    /* REMOVIDO: A regra .clubs-grid aqui foi removida para que a regra do auto-fit funcione */
+    /* Regras de clubes removidas daqui porque o auto-fit resolve para todos */
     
     .club-item {
         flex-direction: column;
