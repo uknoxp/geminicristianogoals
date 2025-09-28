@@ -5,8 +5,8 @@
 :root {
     --counter-color: #FFD700; 
     --font-primary: 'Montserrat', sans-serif;
-    --color-text: #E0E0E0;
-    --color-secondary: #AAAAAA;
+    --color-text: #FFFFFF;
+    --color-secondary: #FFFFFF;
 }
 
 * {
@@ -229,3 +229,4 @@ h2 {
         font-size: 4em;
     }
 }
+
