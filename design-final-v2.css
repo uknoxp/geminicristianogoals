@@ -44,7 +44,8 @@ header {
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); 
+    /* CORREÇÃO: REMOVER A SOMBRA QUE CAUSA A LINHA ESCURA */
+    box-shadow: none; 
     background-color: transparent; 
 }
 
@@ -212,3 +213,4 @@ h2 {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 }
+
