@@ -15,7 +15,6 @@ async function loadData() {
         const data = await response.json();
         const calculatedTotalGoals = data.clubs.reduce((sum, club) => sum + club.goals, 0);
         
-        // Aplica as configurações do JSON
         applyGeneralConfig(data.config); 
         
         renderTotalGoals(calculatedTotalGoals);
@@ -29,8 +28,7 @@ async function loadData() {
 
 function applyGeneralConfig(config) {
     const root = document.documentElement;
-    // Corrigido para carregar o fundo e cor corretamente
-    root.style.setProperty('--bg-image', `url(${config.background})`);
+    // APENAS COR: Linha de fundo removida para não haver conflito com o CSS.
     root.style.setProperty('--counter-color', config.counterColor);
 }
 
