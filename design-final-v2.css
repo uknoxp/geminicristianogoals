@@ -20,7 +20,6 @@ body {
     color: var(--color-text);
     min-height: 100vh;
     
-    /* Fundo definido diretamente aqui. */
     background-image: url("/assets/img/background.jpg"); 
     background-size: cover;
     background-position: center center;
@@ -44,13 +43,11 @@ header {
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    /* CORREÇÃO: REMOVER A SOMBRA QUE CAUSA A LINHA ESCURA */
-    box-shadow: none; 
+    box-shadow: none; /* CORREÇÃO: REMOVIDA A SOMBRA QUE CAUSAVA A LINHA ESCURA */
     background-color: transparent; 
 }
 
 .counter-container {
-    /* Sem fundo, sem padding, sem sombra: Apenas o texto flutuante */
     background: transparent; 
     padding: 0; 
     border-radius: 0;
@@ -96,26 +93,27 @@ h2 {
 
 .data-grid {
     display: grid;
-    gap: 20px;       /* Espaçamento entre os itens da grelha (Horizontal e Vertical) */
-    padding: 20px;   /* Recuo nas margens da grelha */
+    gap: 20px;       
+    padding: 20px;   
     background: transparent; 
     border-radius: 0;
 }
 
 /* CLUBS GRID */
 .clubs-grid {
+    /* LAYOUT RESPONSIVO: Ajusta o número de colunas à largura do ecrã */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .club-item {
     background: transparent;
     border-radius: 0;
-    padding: 15px; /* RESTAURADO: Espaço interno para que o texto não fique colado */
+    padding: 15px; 
     display: flex;
     flex-direction: column; 
     text-align: center;
     align-items: center; 
-    transition: none; /* Sem transições */
+    transition: none; 
     box-shadow: none; 
 }
 
@@ -158,7 +156,7 @@ h2 {
 .trophy-item {
     background: transparent; 
     border-radius: 0;
-    padding: 15px 10px; /* RESTAURADO: Espaço interno para que o texto não fique colado */
+    padding: 15px 10px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -213,4 +211,3 @@ h2 {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 }
-
