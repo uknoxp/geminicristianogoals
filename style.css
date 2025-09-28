@@ -3,11 +3,8 @@
 /* ================================================= */
 
 :root {
-    /* Estas variáveis serão definidas pelo JavaScript */
     --bg-image: url("/assets/img/background.jpg"); 
-    --counter-color: #FFD700; /* Dourado */
-
-    /* Variáveis de estilo */
+    --counter-color: #FFD700; 
     --font-primary: 'Montserrat', sans-serif;
     --color-text: #E0E0E0;
     --color-secondary: #AAAAAA;
@@ -25,13 +22,10 @@ body {
     font-family: var(--font-primary);
     color: var(--color-text);
     min-height: 100vh;
-    
-    /* Dependência da variável do JavaScript */
     background-image: var(--bg-image);
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,8 +51,7 @@ header {
     background: var(--color-dark-bg);
     padding: 30px 50px;
     border-radius: 15px;
-    /* ESTA LINHA CRIA O BLUR E A TRANSPARÊNCIA NAS CAIXAS */
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); /* CORRIGE AS CAIXAS PRETAS OPA CAS */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     margin-top: -15vh; 
 }
@@ -72,17 +65,65 @@ header {
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
 }
 
-.counter-label {
-    font-size: 1.5em;
-    font-weight: 700;
-    color: var(--color-text);
-    letter-spacing: 5px;
-    text-transform: uppercase;
+/* ------------------------------------------------- */
+/* === GRID DE DADOS (Clubes)                      === */
+/* ------------------------------------------------- */
+
+.data-grid {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    background: var(--color-dark-bg);
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
 }
 
-/* ------------------------------------------------- */
-/* === CONTEÚDO PRINCIPAL (MAIN)                   === */
-/* ------------------------------------------------- */
+.clubs-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.club-item {
+    background: var(--color-dark-bg-card);
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* CORRIGE O LAYOUT DOS CLUBES (Fica vertical) */
+    text-align: center;
+    align-items: center; 
+    transition: transform 0.2s;
+}
+
+.club-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.club-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin: 0 0 10px 0;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+}
+
+.club-name {
+    font-weight: 900;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.club-goals {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--counter-color);
+}
+
+.club-games {
+    font-size: 0.85em;
+    color: var(--color-secondary);
+}
+
+/* ------------------- RESTO DO CSS (TROFÉUS, ETC.) ------------------- */
 
 main {
     width: 90%;
@@ -103,69 +144,6 @@ h2 {
     text-shadow: 0 0 5px rgba(255, 215, 0, 0.4);
 }
 
-/* ------------------------------------------------- */
-/* === GRID DE DADOS (Clubes e Troféus)            === */
-/* ------------------------------------------------- */
-
-.data-grid {
-    display: grid;
-    gap: 20px;
-    padding: 20px;
-    background: var(--color-dark-bg);
-    border-radius: 10px;
-    backdrop-filter: blur(3px);
-}
-
-/* CLUBS GRID */
-.clubs-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.club-item {
-    background: var(--color-dark-bg-card);
-    border-radius: 8px;
-    padding: 15px;
-    display: flex;
-    /* MUDANÇA ESSENCIAL: Alinhamento vertical do conteúdo do clube */
-    flex-direction: column;
-    text-align: center;
-    align-items: center; 
-    transition: transform 0.2s;
-}
-
-.club-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-}
-
-.club-logo {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    /* Ajuste de margem para o layout vertical */
-    margin: 0 0 10px 0;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
-}
-
-/* O Nome, Golos e Jogos agora aparecerão em coluna */
-.club-name {
-    font-weight: 900;
-    font-size: 1.1em;
-    margin-bottom: 5px;
-}
-
-.club-goals {
-    font-size: 1.2em;
-    font-weight: 700;
-    color: var(--counter-color);
-}
-
-.club-games {
-    font-size: 0.85em;
-    color: var(--color-secondary);
-}
-
-/* TROPHIES GRID */
 .trophies-grid {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     text-align: center;
@@ -209,18 +187,10 @@ h2 {
     min-height: 3em; 
 }
 
-/* ------------------------------------------------- */
-/* === MEDIA QUERIES (Responsividade)              === */
-/* ------------------------------------------------- */
-
 @media (max-width: 768px) {
     .total-goals {
         font-size: 6em;
     }
-    .counter-label {
-        font-size: 1.2em;
-    }
-    /* CORREÇÃO DO LAYOUT MOBILE (Garantido em dispositivos pequenos) */
     .club-item {
         flex-direction: column;
         text-align: center;
@@ -230,15 +200,5 @@ h2 {
     }
     .trophies-grid {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-    .trophy-icon {
-        width: 45px;
-        height: 45px;
-    }
-    .trophy-count {
-        font-size: 1.5em;
-    }
-    .trophy-name {
-        font-size: 0.7em;
     }
 }
