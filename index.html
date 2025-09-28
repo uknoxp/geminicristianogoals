@@ -9,7 +9,7 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <link rel="manifest" href="/geminicristianogoals/manifest.json">
 
@@ -50,6 +50,19 @@
     </main>
 
     <script src="script.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                // Usamos o caminho absoluto para garantir que funciona no GitHub Pages.
+                navigator.serviceWorker.register('/geminicristianogoals/service-worker.js').then(function(registration) {
+                    console.log('ServiceWorker registado com sucesso');
+                }, function(err) {
+                    console.log('Falha no registro do ServiceWorker: ', err);
+                });
+            });
+        }
+    </script>
 </body>
 </html>
 
