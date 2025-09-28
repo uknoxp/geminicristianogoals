@@ -3,15 +3,14 @@
 /* ================================================= */
 
 :root {
-    /* Estas variáveis serão definidas pelo JavaScript em tempo real */
-    --bg-image: url("/assets/img/background.jpg"); 
-    --counter-color: #FFD700; /* Dourado */
+    /* O JS ainda irá definir estas variáveis, mas o fundo não as usará mais */
+    --counter-color: #FFD700; 
 
     /* Variáveis de estilo */
     --font-primary: 'Montserrat', sans-serif;
     --color-text: #E0E0E0;
     --color-secondary: #AAAAAA;
-    --color-dark-bg: rgba(18, 18, 18, 0.85); /* Fundo escuro semitransparente */
+    --color-dark-bg: rgba(18, 18, 18, 0.85);
     --color-dark-bg-card: rgba(30, 30, 30, 0.9);
 }
 
@@ -26,8 +25,10 @@ body {
     color: var(--color-text);
     min-height: 100vh;
     
-    /* Configuração do fundo */
-    background-image: var(--bg-image);
+    /* === CORREÇÃO DE FUNDO: Caminho Direto === */
+    /* Removemos a variável CSS (--bg-image) e usamos o caminho direto para a imagem.
+       Isto elimina o risco de o JavaScript falhar ao definir a variável. */
+    background-image: url("/assets/img/background.jpg");
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -35,7 +36,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 50px; /* Espaço para o fim de página */
+    padding-bottom: 50px;
 }
 
 /* ------------------------------------------------- */
@@ -44,7 +45,7 @@ body {
 
 header {
     width: 100%;
-    min-height: 100vh; /* Ocupa a altura total da tela */
+    min-height: 100vh; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -240,7 +241,6 @@ h2 {
 /* === CORREÇÃO DE FUNDO FIXO E SCROLL PARA IOS === */
 /* ================================================= */
 
-/* 2. Truque para corrigir o bug de altura e scroll no iOS Safari */
 @supports (-webkit-overflow-scrolling: touch) {
     body {
         background-attachment: scroll !important; 
