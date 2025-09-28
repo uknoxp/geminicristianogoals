@@ -1,12 +1,10 @@
 // script.js
-// Elementos DOM (Capturados no topo do ficheiro)
 const totalGoalsDisplay = document.getElementById('total-goals-display');
 const clubsContainer = document.getElementById('clubs-container');
 const trophiesContainer = document.getElementById('trophies-container');
 
-// URL para o nosso ficheiro de dados JSON
 const DATA_URL = 'data.json';
-// Função principal para carregar e processar os dados
+
 async function loadData() {
     try {
         const response = await fetch(DATA_URL);
@@ -15,10 +13,11 @@ async function loadData() {
         }
         
         const data = await response.json();
-        // CÁLCULO DINÂMICO DO TOTAL: Soma todos os golos das equipas
         const calculatedTotalGoals = data.clubs.reduce((sum, club) => sum + club.goals, 0);
-        // Chamar as funções para renderizar cada secção
-        applyGeneralConfig(data.config);
+        
+        // Aplica as configurações do JSON
+        applyGeneralConfig(data.config); 
+        
         renderTotalGoals(calculatedTotalGoals);
         renderClubs(data.clubs);
         renderTrophies(data.trophies);
@@ -28,27 +27,17 @@ async function loadData() {
     }
 }
 
-// ----------------------------------------------------
-// Função para aplicar as configurações gerais
-// ----------------------------------------------------
 function applyGeneralConfig(config) {
     const root = document.documentElement;
+    // Corrigido para carregar o fundo e cor corretamente
     root.style.setProperty('--bg-image', `url(${config.background})`);
     root.style.setProperty('--counter-color', config.counterColor);
 }
 
-
-// ----------------------------------------------------
-// Função para renderizar o contador principal
-// ----------------------------------------------------
 function renderTotalGoals(totalGoals) {
     totalGoalsDisplay.textContent = totalGoals.toLocaleString('pt-PT');
 }
 
-
-// ----------------------------------------------------
-// Função para gerar os cartões dos clubes
-// ----------------------------------------------------
 function renderClubs(clubs) {
     clubsContainer.innerHTML = '';
     clubs.forEach(club => {
@@ -66,10 +55,6 @@ function renderClubs(clubs) {
     });
 }
 
-
-// ----------------------------------------------------
-// Função para gerar os cartões dos troféus
-// ----------------------------------------------------
 function renderTrophies(trophies) {
     trophiesContainer.innerHTML = '';
     trophies.forEach(trophy => {
@@ -86,7 +71,4 @@ function renderTrophies(trophies) {
     });
 }
 
-// ----------------------------------------------------
-// Iniciar a aplicação
-// ----------------------------------------------------
 loadData();
