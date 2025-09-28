@@ -19,11 +19,9 @@ body {
     font-family: var(--font-primary);
     color: var(--color-text);
     min-height: 100vh;
-    /* CORREÇÃO CRÍTICA: Bloquear o scroll e rolamento lateral */
+    /* CORREÇÃO PARA GERIR SCROLL DE CONTEÚDO SEM QUEBRAR O LAYOUT */
     overflow-x: hidden;
-    overflow-y: scroll;
-    /* Linha que pode resolver o problema de fundo fixo em apps móveis */
-    -webkit-overflow-scrolling: touch; 
+    overflow-y: auto;
     
     background-image: url("/assets/img/background.jpg"); 
     background-size: cover;
@@ -42,14 +40,13 @@ body {
 
 header {
     width: 100%;
-    /* REVERSÃO: Voltar a definir a altura do header para manter o layout */
-    min-height: 100vh; 
+    min-height: 100vh; /* Revertido: Mantém o contador centrado no topo */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    box-shadow: none; /* Linha preta removida */
+    box-shadow: none;
     background-color: transparent; 
 }
 
@@ -163,67 +160,4 @@ h2 {
     text-align: center;
 }
 
-.trophy-item {
-    background: transparent; 
-    border-radius: 0;
-    padding: 15px 10px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    transition: none; 
-    min-height: 180px;
-    box-shadow: none; 
-}
-
-.trophy-item:hover {
-    box-shadow: none; 
-}
-
-.trophy-icon {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    margin-bottom: 5px;
-}
-
-.trophy-count {
-    font-size: 2em;
-    font-weight: 900;
-    color: var(--counter-color);
-    margin: 5px 0;
-}
-
-.trophy-name {
-    font-size: 0.8em;
-    font-weight: 700;
-    color: var(--color-secondary);
-    line-height: 1.2;
-    min-height: 3em; 
-}
-
-/* ------------------------------------------------- */
-/* === MEDIA QUERIES (Responsividade)              === */
-/* ------------------------------------------------- */
-
-@media (max-width: 768px) {
-    .total-goals {
-        font-size: 6em;
-    }
-    
-    /* CORREÇÃO: Forçar 3 colunas para evitar que os ícones laterais desapareçam/sejam cortados */
-    .clubs-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .club-item {
-        flex-direction: column;
-        text-align: center;
-    }
-    .club-logo {
-        margin: 0 0 10px 0;
-    }
-    .trophies-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-}
+.tro
