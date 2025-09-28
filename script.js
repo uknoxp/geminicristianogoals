@@ -28,7 +28,7 @@ async function loadData() {
 
 function applyGeneralConfig(config) {
     const root = document.documentElement;
-    // APENAS COR: Linha de fundo removida para não haver conflito com o CSS.
+    // APENAS COR: A linha de fundo foi removida daqui, para o CSS controlar.
     root.style.setProperty('--counter-color', config.counterColor);
 }
 
